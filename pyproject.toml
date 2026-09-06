@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "logic-opt-kit"
+version = "1.0.0"
+authors = [{name="Math-Insight-Lab"}]
+description = "运筹优化与数理逻辑教学工具集；MIP建模，PuLP兼容，报告导出，可视化"
+license = {file="LICENSE"}
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "highspy",
+    "matplotlib>=3.8",
+    "sympy>=1.12",
+    "numpy>=1.24"
+]
+
+[project.optional-dependencies]
+scip = ["pyscipopt>=6.2.1"]
+test = ["pytest>=7.0"]
+
+[project.urls]
+Repository = "https://github.com/Math-Insight-Lab/logic-opt-kit"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "scip: mark tests which require pyscipopt/SCIP solver"
+]

@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+*.png
+*.pdf
+*.md.out
+.vscode/
+.idea/
+*.ipynb_checkpoints
+.env
+*.sol.png
